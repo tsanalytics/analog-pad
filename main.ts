@@ -5,9 +5,9 @@ pins.setPull(DigitalPin.P14, PinPullMode.PullNone)
 pins.setPull(DigitalPin.P12, PinPullMode.PullNone)
 basic.forever(function () {
     if (pins.digitalReadPin(DigitalPin.P13) == 0) {
-        radio.sendString("Open")
+        radio.sendString("Up")
     } else if (pins.digitalReadPin(DigitalPin.P15) == 0) {
-        radio.sendString("Close")
+        radio.sendString("Down")
     } else if (pins.digitalReadPin(DigitalPin.P12) == 0) {
         radio.sendString("LEDL")
     } else if (pins.digitalReadPin(DigitalPin.P14) == 0) {
